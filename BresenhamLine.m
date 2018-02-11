@@ -23,7 +23,6 @@ yn = y0;
 
 for n = 0:dx
     
-    plot(xn,yn,'r*');
     xo(n+1) = xn;
     yo(n+1) = yn;
     
@@ -35,11 +34,12 @@ for n = 0:dx
     end
     
     xn = xn+1;
-    plot(xo,yo,'b','linewidth',2);
+    plot(xo,yo,'b','linewidth',2,'marker','o','MarkerEdgeColor','red');
     do = dn;
     
 end
-
-axis([x0-10 x1+10 y0-10 y1+10]);
+set(gca,'xtick',0:1:x1+1);
+set(gca,'ytick',0:1:y1+1);
+axis([0 x1+1 0 y1+1]);
 title("Bresenham's Line Drawing Algorithm");
 grid on
