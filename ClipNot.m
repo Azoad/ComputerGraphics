@@ -15,12 +15,6 @@ plot([0,0],[-10 10],'black','linewidth',1);
 hold on
 grid on
 
-[x,y] = ginput(2);
-plot(x,y,'b','linewidth',1,'marker','.','MarkerSize',10);
-text(x(1),y(1),['(' num2str(x(1)) ',' num2str(y(1)) ')']);
-text(x(2),y(2),['(' num2str(x(2)) ',' num2str(y(2)) ')']);
-hold on
-
 [xmin,ymin] = ginput(1);
 plot(xmin,ymin,'r','linewidth',1,'marker','.','MarkerSize',10);
 text(xmin,ymin,['(' num2str(xmin) ',' num2str(ymin) ')']);
@@ -36,6 +30,12 @@ plot([amn amx],[bmn bmn],'red','linewidth',1);
 plot([amn amx],[bmx bmx],'red','linewidth',1);
 plot([amn amn],[bmn bmx],'red','linewidth',1);
 plot([amx amx],[bmn bmx],'red','linewidth',1);
+[x,y] = ginput(2);
+plot(x,y,'b','linewidth',1,'marker','.','MarkerSize',10);
+text(x(1),y(1),['(' num2str(x(1)) ',' num2str(y(1)) ')']);
+text(x(2),y(2),['(' num2str(x(2)) ',' num2str(y(2)) ')']);
+hold on
+
 
 if((y(1)-ymax)>0)
     b1 = 1;
